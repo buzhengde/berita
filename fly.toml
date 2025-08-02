@@ -1,0 +1,12 @@
+app = "whatsapp-rss-bot"
+primary_region = "sin"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[env]
+  RSS_URL = "https://rss.kamu.com/feed.xml"
+  TARGET_WA = "6287777xxxx@c.us"
+
+[deploy]
+  release_command = "node index.js"
